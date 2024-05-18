@@ -9,3 +9,4 @@ vim.opt.relativenumber = true
 vim.opt.signcolumn = "yes"
 vim.g.netrw_banner = 0
 vim.g.netrw_mouse = 2
+vim.opt.inccommand = "split"

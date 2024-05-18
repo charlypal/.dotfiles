@@ -31,6 +31,7 @@ Spec "charly.boo"
 Spec "charly.trouble"
 Spec "charly.oil"
 Spec "charly.quickfix"
+Spec "charly.luasnip"
 Spec "charly.tmux-nav"
 Spec "charly.epi_headers"
 
