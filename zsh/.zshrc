@@ -12,13 +12,21 @@ source $ZSH/oh-my-zsh.sh
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-function kitty() {
-    /bin/kitty --start-as fullscreen "$@"
-}
+# -------------PowerLevel10k-------------
+
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+# -------------Pure-------------
+
+# fpath+=($HOME/.zsh/pure)
+# autoload -U promptinit; promptinit
+# prompt pure
+
+# -------------Starship-------------
+
+# eval "$(starship init zsh)"
 
 # -------------Alias--------------
 
@@ -38,7 +46,19 @@ alias c="clear"
 alias gpl="git pull"
 alias battery="echo -n 'Battery : '; cat /sys/class/power_supply/BAT0/capacity"
 alias gst="git status"
-alias ben_laden="kill -9 -1"
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+
 export PATH=$PATH:/home/charly/.cargo/bin
 PATH=$PATH:~/.local/bin
+
+# ------------ fzf -----------------
+source <(fzf --zsh)
+
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
+
+
+# alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+eval "$(zoxide init zsh)"
+alias cd="z"
