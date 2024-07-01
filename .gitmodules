@@ -4,3 +4,6 @@
 [submodule "tmux"]
 	path = tmux
 	url = git@github.com:charlypal/Tmux-Config.git
+[submodule "i3"]
+	path = i3
+	url = git@github.com:charlypal/i3-Config.git
